@@ -1,0 +1,16 @@
+services:
+    api:
+        build: .
+        ports:
+            - 80:80
+        environment:
+            - DB_URL=mongodb+srv://Mordan:admin@miapp.01vum.gcp.mongodb.net/test
+        volumes:
+            - ./app:/app
+    db:
+        image: mongo
+
+        volumes:
+            - taskdb:crud
+volumes:
+    taskdb:
