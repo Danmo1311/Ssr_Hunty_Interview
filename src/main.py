@@ -3,25 +3,9 @@ from typing import List
 from fastapi import FastAPI
 from service_layer import handlers
 from domain import commands, events
-
-from fastapi.middleware.cors import CORSMiddleware
+from mangum import Mangum
 
 app = FastAPI()
-
-origins = [
-    "http://localhost.tiangolo.com",
-    "https://localhost.tiangolo.com",
-    "http://localhost",
-    "http://localhost:8080",
-]
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
 
 
 @app.get("/")
@@ -111,3 +95,6 @@ def actualizar_empresa(empresa: commands.Empresa, empresa_id: str):
 @app.delete("/empresa/{empresa_id}")
 def eliminar_empresa(empresa_id: str):
     return handlers.eliminar_empresa(empresa_id=empresa_id)
+
+
+handler = Mangum(app)
