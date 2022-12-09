@@ -1,6 +1,6 @@
 FROM tiangolo/uvicorn-gunicorn-fastapi:python3.8
 
-COPY ./app /app
+COPY . .
 RUN pip install install bson
 RUN pip install install pymongo
 EXPOSE 80
