@@ -155,7 +155,6 @@ def get_empresas() -> [events.Empresa]:
 def create_usuarios(usuarios: [commands.Usuario]):
     user_to_insert = []
     vacant_skills = []
-    # try:
     mycol = mydb["usuarios"]
     for item in usuarios:
 
