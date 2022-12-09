@@ -1,0 +1,466 @@
+{
+	"info": {
+		"_postman_id": "01c85d58-5f61-440f-99bb-1e14366afa8f",
+		"name": "Fastapi-interview",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21905982"
+	},
+	"item": [
+		{
+			"name": "Vacantes",
+			"item": [
+				{
+					"name": "Editar Vacante",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"PositionName\": \"string\",\r\n  \"Salary\": 0,\r\n  \"Currency\": \"string\",\r\n  \"VacancyLink\": \"string\",\r\n  \"CompanyName\": \"string\",\r\n  \"RequiredSkills\": [\r\n    {\r\n      \"skillName\": \"string\",\r\n      \"skillYears\": 0\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fk3tmvrit7z5gqxcki3kr3seyi0tbiev.lambda-url.us-east-1.on.aws/vacantes/?vacante_id",
+							"protocol": "https",
+							"host": [
+								"fk3tmvrit7z5gqxcki3kr3seyi0tbiev",
+								"lambda-url",
+								"us-east-1",
+								"on",
+								"aws"
+							],
+							"path": [
+								"vacantes",
+								""
+							],
+							"query": [
+								{
+									"key": "vacante_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar todas las vacantes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fk3tmvrit7z5gqxcki3kr3seyi0tbiev.lambda-url.us-east-1.on.aws/vacantes",
+							"protocol": "https",
+							"host": [
+								"fk3tmvrit7z5gqxcki3kr3seyi0tbiev",
+								"lambda-url",
+								"us-east-1",
+								"on",
+								"aws"
+							],
+							"path": [
+								"vacantes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Vacante",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"PositionName\": \"string\",\r\n    \"Salary\": 0,\r\n    \"Currency\": \"string\",\r\n    \"VacancyLink\": \"string\",\r\n    \"CompanyName\": \"string\",\r\n    \"RequiredSkills\": [\r\n      {\r\n        \"skillName\": \"string\",\r\n        \"skillYears\": 0\r\n      }\r\n    ]\r\n  }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fk3tmvrit7z5gqxcki3kr3seyi0tbiev.lambda-url.us-east-1.on.aws/vacantes?company_name=netflix",
+							"protocol": "https",
+							"host": [
+								"fk3tmvrit7z5gqxcki3kr3seyi0tbiev",
+								"lambda-url",
+								"us-east-1",
+								"on",
+								"aws"
+							],
+							"path": [
+								"vacantes"
+							],
+							"query": [
+								{
+									"key": "company_name",
+									"value": "netflix"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Vacante",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://fk3tmvrit7z5gqxcki3kr3seyi0tbiev.lambda-url.us-east-1.on.aws/vacantes/?vacante_id",
+							"protocol": "https",
+							"host": [
+								"fk3tmvrit7z5gqxcki3kr3seyi0tbiev",
+								"lambda-url",
+								"us-east-1",
+								"on",
+								"aws"
+							],
+							"path": [
+								"vacantes",
+								""
+							],
+							"query": [
+								{
+									"key": "vacante_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar vacante por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fk3tmvrit7z5gqxcki3kr3seyi0tbiev.lambda-url.us-east-1.on.aws/vacantes/?vacante_id=63925c2217454f356b44a908",
+							"protocol": "https",
+							"host": [
+								"fk3tmvrit7z5gqxcki3kr3seyi0tbiev",
+								"lambda-url",
+								"us-east-1",
+								"on",
+								"aws"
+							],
+							"path": [
+								"vacantes",
+								""
+							],
+							"query": [
+								{
+									"key": "vacante_id",
+									"value": "63925c2217454f356b44a908"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Empresas",
+			"item": [
+				{
+					"name": "Eliminar Empresa",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://fk3tmvrit7z5gqxcki3kr3seyi0tbiev.lambda-url.us-east-1.on.aws/empresa/?empresa_id",
+							"protocol": "https",
+							"host": [
+								"fk3tmvrit7z5gqxcki3kr3seyi0tbiev",
+								"lambda-url",
+								"us-east-1",
+								"on",
+								"aws"
+							],
+							"path": [
+								"empresa",
+								""
+							],
+							"query": [
+								{
+									"key": "empresa_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Empresa",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"CompanyName\": \"string\"\r\n  }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fk3tmvrit7z5gqxcki3kr3seyi0tbiev.lambda-url.us-east-1.on.aws/empresas",
+							"protocol": "https",
+							"host": [
+								"fk3tmvrit7z5gqxcki3kr3seyi0tbiev",
+								"lambda-url",
+								"us-east-1",
+								"on",
+								"aws"
+							],
+							"path": [
+								"empresas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar empresa por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fk3tmvrit7z5gqxcki3kr3seyi0tbiev.lambda-url.us-east-1.on.aws/empresa/639259ea60ea553daf050c71",
+							"protocol": "https",
+							"host": [
+								"fk3tmvrit7z5gqxcki3kr3seyi0tbiev",
+								"lambda-url",
+								"us-east-1",
+								"on",
+								"aws"
+							],
+							"path": [
+								"empresa",
+								"639259ea60ea553daf050c71"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Empresa",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"CompanyName\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fk3tmvrit7z5gqxcki3kr3seyi0tbiev.lambda-url.us-east-1.on.aws/empresa/?empresa_id",
+							"protocol": "https",
+							"host": [
+								"fk3tmvrit7z5gqxcki3kr3seyi0tbiev",
+								"lambda-url",
+								"us-east-1",
+								"on",
+								"aws"
+							],
+							"path": [
+								"empresa",
+								""
+							],
+							"query": [
+								{
+									"key": "empresa_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar todas las empresas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fk3tmvrit7z5gqxcki3kr3seyi0tbiev.lambda-url.us-east-1.on.aws/empresas",
+							"protocol": "https",
+							"host": [
+								"fk3tmvrit7z5gqxcki3kr3seyi0tbiev",
+								"lambda-url",
+								"us-east-1",
+								"on",
+								"aws"
+							],
+							"path": [
+								"empresas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Eliminar Usuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://fk3tmvrit7z5gqxcki3kr3seyi0tbiev.lambda-url.us-east-1.on.aws/usuario/?user_id",
+							"protocol": "https",
+							"host": [
+								"fk3tmvrit7z5gqxcki3kr3seyi0tbiev",
+								"lambda-url",
+								"us-east-1",
+								"on",
+								"aws"
+							],
+							"path": [
+								"usuario",
+								""
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"FirstName\": \"string\",\r\n  \"LastName\": \"string\",\r\n  \"Email\": \"string\",\r\n  \"YearsPreviousExperience\": 0,\r\n  \"Skills\": [\r\n    {\r\n      \"skillName\": \"string\",\r\n      \"skillYears\": 0\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fk3tmvrit7z5gqxcki3kr3seyi0tbiev.lambda-url.us-east-1.on.aws/usuario/?user_id",
+							"protocol": "https",
+							"host": [
+								"fk3tmvrit7z5gqxcki3kr3seyi0tbiev",
+								"lambda-url",
+								"us-east-1",
+								"on",
+								"aws"
+							],
+							"path": [
+								"usuario",
+								""
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar user por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fk3tmvrit7z5gqxcki3kr3seyi0tbiev.lambda-url.us-east-1.on.aws/usuario/639271820b8e6a8642cffc27",
+							"protocol": "https",
+							"host": [
+								"fk3tmvrit7z5gqxcki3kr3seyi0tbiev",
+								"lambda-url",
+								"us-east-1",
+								"on",
+								"aws"
+							],
+							"path": [
+								"usuario",
+								"639271820b8e6a8642cffc27"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar todas los usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fk3tmvrit7z5gqxcki3kr3seyi0tbiev.lambda-url.us-east-1.on.aws/usuarios",
+							"protocol": "https",
+							"host": [
+								"fk3tmvrit7z5gqxcki3kr3seyi0tbiev",
+								"lambda-url",
+								"us-east-1",
+								"on",
+								"aws"
+							],
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"FirstName\": \"string\",\r\n    \"LastName\": \"string\",\r\n    \"Email\": \"string\",\r\n    \"YearsPreviousExperience\": 0,\r\n    \"Skills\": [\r\n      {\r\n        \"skillName\": \"string\",\r\n        \"skillYears\": 0\r\n      }\r\n    ]\r\n  }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fk3tmvrit7z5gqxcki3kr3seyi0tbiev.lambda-url.us-east-1.on.aws/usuarios",
+							"protocol": "https",
+							"host": [
+								"fk3tmvrit7z5gqxcki3kr3seyi0tbiev",
+								"lambda-url",
+								"us-east-1",
+								"on",
+								"aws"
+							],
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
